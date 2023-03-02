@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+        <pattern>HELLO</pattern>
+        <template>
+            Hello there! I am here to help you discover your career path. Type "Begin" to get started.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Hi</pattern>
+        <template>
+            Hello there! I am here to help you discover your career path. Type "Begin" to get started.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Hey</pattern>
+        <template>
+            Hello there! I am here to help you discover your career path. Type "Begin" to get started.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Start</pattern>
+        <template>
+            Hello there! I am here to help you discover your career path. Type "Begin" to get started.
+        </template>
+    </category>
+  
+<category>
+    <pattern>Begin </pattern>
+    <template>Let's see if I can help guide you in the right direction. Here is an important question! Are you into programming?
+        <button>
+            <text>Yes</text>
+            <postback>Yes</postback>
+        </button>
+        <button>
+            <text>No</text>
+            <postback>Not Really</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>yes</pattern>
+        <template>
+            Great! Here are some career paths that might interest you! (Click on any of the following options for more information)
+            
+            <card>
+                <image>https://widget.pandorabots.com/prod/assets/pb-robot.svg</image>
+                <title>Career Paths:</title>
+                <button>
+                    <text>Software Developer</text>
+                    <url>https://www.computerscience.org/careers/software-developer/</url>
+                </button>
+                <button>
+                    <text>Network Admin</text>
+                    <url>https://www.computerscience.org/careers/network-administrator/</url>
+                </button>
+                <button>
+                    <text>Database Admin</text>
+                    <url>https://www.computerscience.org/careers/database-administrator/</url>
+                </button>
+                <button>
+                    <text>Systems Analyst</text>
+                    <url>https://www.computerscience.org/careers/systems-analyst/</url>
+                </button>
+                <button>
+                    <text>Software Engineer</text>
+                    <url>https://www.computerscience.org/careers/software-engineer/</url>
+                </button>
+            </card>
+            
+            Do any of these options interest you?
+            <button>
+                <text>Yes I found one, thanks!</text>
+                <postback>finished</postback>
+            </button>
+            <button>
+                <text>No, show me more..</text>
+                <postback>No</postback>
+            </button>
+        </template>
+</category>
+
+<category>
+    <pattern>yesback</pattern>
+        <template>
+            Here are those first set of options:
+            
+            <card>
+                <image>https://widget.pandorabots.com/prod/assets/pb-robot.svg</image>
+                <title>Career Paths:</title>
+                <button>
+                    <text>Software Developer</text>
+                    <postback>Insert Postback</postback>
+                </button>
+                <button>
+                    <text>Network Admin</text>
+                    <postback>Insert Postback</postback>
+                </button>
+                <button>
+                    <text>Database Admin</text>
+                    <postback>Insert Postback</postback>
+                </button>
+                <button>
+                    <text>Systems Analyst</text>
+                    <postback>Insert Postback</postback>
+                </button>
+                <button>
+                    <text>Software Engineer</text>
+                    <postback>Insert Postback</postback>
+                </button>
+            </card>
+            -------------------------------------------------------
+            <button>
+                <text>I found one, thanks!</text>
+                <postback>finished</postback>
+            </button>
+            <button>
+                <text>Maybe this field is not for me</text>
+                <postback>goodbye</postback>
+            </button>
+        </template>
+</category>
+
+<category>
+    <pattern>Not really</pattern>
+    <template>
+        Sorry to hear that! Unfortunatley, this bot is intended to help you find a career releated to programming. Have a nice day!
+    </template>
+</category>
+
+<category>
+    <pattern>no</pattern>
+    <template>
+        Sorry to hear that! Here are a few more options:
+        
+        <card>
+                <image>https://widget.pandorabots.com/prod/assets/pb-robot.svg</image>
+                <title>Career Paths:</title>
+                <button>
+                    <text>Computer Hardware Engineer</text>
+                    <url>https://www.computerscience.org/careers/computer-hardware-engineer/</url>
+                </button>
+                <button>
+                    <text>Information Security Analyst</text>
+                    <url>https://www.computerscience.org/careers/Information-Security-Analyst/</url>
+                </button>
+                <button>
+                    <text>Web Designer</text>
+                    <url>https://www.computerscience.org/careers/web-design/</url>
+                </button>
+            </card>
+        Would you like to go back to the previous options?  
+        
+         <button>
+            <text>Yes</text>
+            <postback>yesback</postback>
+        </button>
+        
+            <button>
+                <text>I found one, thanks!</text>
+                <postback>finished</postback>
+            </button>
+    </template>
+</category>
+
+<category>
+    <pattern>finished</pattern>
+    <template>
+        <card>
+            <image>https://widget.pandorabots.com/prod/assets/pb-robot.svg</image>
+            <title>Congrats!</title>
+        </card>
+        I'm so glad I was able to assist you! Have a great day!
+    </template>
+</category>
+
+<category>
+    <pattern>goodbye</pattern>
+    <template>
+        <card>
+            <image>https://widget.pandorabots.com/prod/assets/pb-robot.svg</image>
+            <title>Bummer!</title>
+        </card>
+        I'm sorry I was unable to assist you! Have a great day!
+    </template>
+</category>
+
+</aiml>
